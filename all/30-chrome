@@ -7,7 +7,7 @@ test ! -f ${TARGET} && sudo cat <<EOF > ${TARGET}
 deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 EOF
 
-TMPFILE=`mktemp -q /tmp/$0.XXXXXX`
+TMPFILE=$(mktemp -q /tmp/$0.XXXXXX)
 
 sudo wget -O ${TMPFILE} https://dl.google.com/linux/linux_signing_key.pub
 sudo apt-key add ${TMPFILE}
