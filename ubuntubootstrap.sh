@@ -23,8 +23,9 @@
 
 
 dir=$(dirname "$0")
-TYPE=${1:-all}
+TYPE=${1:-17.10}
 
+export DEBIAN_FRONTEND=noninteractive
 run-parts "${@:2}" ${TYPE}
 
 #echo "${SUDO_USER}"

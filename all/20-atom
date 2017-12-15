@@ -1,4 +1,4 @@
 #!/bin/bash
 
 sudo add-apt-repository -u -y ppa:webupd8team/atom
-sudo apt install -f atom
+sudo apt install -y atom

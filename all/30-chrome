@@ -13,4 +13,4 @@ sudo wget -O ${TMPFILE} https://dl.google.com/linux/linux_signing_key.pub
 sudo apt-key add ${TMPFILE}
 
 sudo apt update
-sudo apt install -f google-chrome-stable
+sudo apt install -y google-chrome-stable
