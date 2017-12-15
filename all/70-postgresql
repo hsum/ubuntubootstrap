@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export DEBIAN_FRONTEND=noninteractive
+sudo apt -y install postgresql libpq-dev postgresql-client postgresql-client-common
+sudo pip install psycopg2 SQLAlchemy 

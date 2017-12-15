@@ -1,0 +1,11 @@
+#!/bin/bash
+
+TARGET=/etc/apt/sources.list.d/google-chrome.list
+test ! -f ${TARGET} && sudo cat <<EOF > ${TARGET}
+### THIS FILE IS AUTOMATICALLY CONFIGURED ###
+# You may comment out this entry, but any other modifications may be lost.
+deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+EOF
+
+sudo apt update
+sudo apt install -f google-chrome-stable

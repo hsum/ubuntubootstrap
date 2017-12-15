@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo apt-get install -f git
+
+if [ ! -f /home/"${SUDO_USER}"/.gitconfig ]
+then
+cat > /home/"${SUDO_USER}"/.gitconfig <<'EOF'
+[core]
+	editor = vim
+EOF
+fi

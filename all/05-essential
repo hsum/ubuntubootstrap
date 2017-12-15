@@ -1,0 +1,33 @@
+#!/bin/bash
+
+sudo apt-get install -f vim tree nmap
+
+(cd / && patch -p0 -N -r -) <<'EOF'
+--- /etc/skel/.bashrc	2017-05-16 20:49:38.000000000 +0800
++++ /etc/skel/.bashrc.better	2017-12-15 12:58:40.730025229 +0800
+@@ -115,3 +115,23 @@
+     . /etc/bash_completion
+   fi
+ fi
++
++# http://mywiki.wooledge.org/BashFAQ/088
++HISTFILESIZE=40000
++HISTSIZE=10000
++PROMPT_COMMAND="history -a"
++shopt -s histappend
++
++mcd() { mkdir -p "$1"; cd "$1";} 
++
++PS1="\D{%Y-%m-%d} \t [\u@\h \W]$ "
++
++alias nowtime='date +"%T"'
++alias now='date +"%Y-%m-%d %T"'
++alias now_='date +"%Y-%m-%d_%T"'
++alias today='date +"%Y-%m-%d"'
++
++backup() { cp "$1"{,.$(now_)};}
++
++PROMPT_COMMAND='echo -ne "\033]0;$(basename ${PWD}), ${USER}@${HOSTNAME}\007"'
++
+EOF
+

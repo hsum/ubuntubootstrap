@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo apt-get install -f sqlite3
+sudo pip install PyMySQL

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+snap refresh hugo || snap install hugo
+sudo pip install Pygments
