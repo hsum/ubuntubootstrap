@@ -25,7 +25,7 @@ sudo apt install -y vim tree nmap
 +alias now_='date +"%Y-%m-%d_%T"'
 +alias today='date +"%Y-%m-%d"'
 +
-+backup() { cp "$1"{,.$(now_)};}
++backup() { cp -a "$1"{,.$(now_)};}
 +activate() { source .ve/bin/activate; }
 
 +
