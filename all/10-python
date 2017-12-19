@@ -3,4 +3,4 @@
 sudo apt install -y python3-pip
 sudo pip3 install --upgrade pip
 sudo apt install -y build-essential libssl-dev libffi-dev python3-dev python3-venv python3-pip
-sudo pip3 install virtualenv records requests
+sudo pip3 install virtualenv records requests flake8
