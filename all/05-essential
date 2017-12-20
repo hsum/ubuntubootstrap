@@ -27,7 +27,6 @@ sudo apt install -y vim tree nmap
 +
 +backup() { cp -a "$1"{,.$(now_)};}
 +activate() { source .ve/bin/activate; }
-
 +
 +PROMPT_COMMAND='echo -ne "\033]0;$(basename ${PWD}), ${USER}@${HOSTNAME}\007"'
 +
