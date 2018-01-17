@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y vim tree nmap
+sudo apt install -y vim tree nmap curl
 
 (cd / && patch -p0 -N -r -) <<'EOF'
 --- /etc/skel/.bashrc	2017-05-16 20:49:38.000000000 +0800
