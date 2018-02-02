@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo apt install graphviz libgraphviz-dev
+sudo pip3 install pygraphviz
