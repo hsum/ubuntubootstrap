@@ -1,0 +1,16 @@
+
+sudo apt -y install nginx
+sudo patch --ignore-whitespace /etc/nginx/mime.types << 'EOF'
+--- /etc/nginx/mime.types.orig	2017-05-03 01:04:08.000000000 +0800
++++ /etc/nginx/mime.types	2018-03-28 14:26:29.955384950 +0800
+@@ -25,6 +25,9 @@
+     image/webp                            webp;
+ 
+     application/font-woff                 woff;
++    application/x-font-ttf           ttc ttf;
++    application/x-font-otf           otf;
++    application/font-woff2           woff2;
+     application/java-archive              jar war ear;
+     application/json                      json;
+     application/mac-binhex40              hqx;
+EOF
